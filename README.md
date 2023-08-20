@@ -1,4 +1,4 @@
-# Rail Fence Cipher Message Encryption and Decryption
+# Rail Fence Cipher Message Encryption and Decryption Tool
 This project implements a message encryption and decryption tool using the Rail Fence Cipher technique. Built with Python and the Django framework, this application allows users to securely encode and decode messages. The Rail Fence Cipher technique adds an extra layer of privacy to communication by rearranging the letters in a unique pattern.
 
 Technologies Used:
