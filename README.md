@@ -3,7 +3,7 @@ This project implements a message encryption and decryption tool using the Rail 
 
 Technologies Used:
 
-  Python
+  Python 
   Django Framework
 
 Features:
