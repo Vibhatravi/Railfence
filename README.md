@@ -36,8 +36,13 @@ Installation:
 To set up the project locally, follow these steps:
 
   1.Ensure you have Python [version] and Django [version] installed.
-  2.Clone this repository: git clone [repository URL]
+  
+  2.Clone this repository: git clone https://github.com/Vibhatravi/Railfence
+  
   3.Navigate to the project directory: cd rail-fence-cipher
+  
   4.Install dependencies: pip install -r requirements.txt
+  
   5.Run migrations: python manage.py migrate
+  
   6.Start the development server: python manage.py runserver  
