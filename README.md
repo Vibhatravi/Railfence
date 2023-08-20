@@ -4,22 +4,31 @@ This project implements a message encryption and decryption tool using the Rail 
 Technologies Used:
 
   *Python 
+  
   *Django Framework
 
 Features:
 
   User-friendly interface for inputting messages and selecting encryption/decryption mode.
+  
   Implementation of the Rail Fence Cipher technique for message encoding and decoding.
+  
   Ensures data privacy by transforming messages into a ciphered format.
+  
   Secure Django backend for smooth user interaction.
 
 How to Use:
 
   1.Clone the repository to your local machine.
+  
   2.Install the required dependencies mentioned in the setup instructions.
+  
   3.Run the Django development server.
+  
   4.Access the application through your browser.
+  
   5.Input the message and select the encryption or decryption mode.
+  
   6.Enjoy secure communication using the Rail Fence Cipher technique!
 
 Installation:
