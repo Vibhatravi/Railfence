@@ -39,7 +39,7 @@ To set up the project locally, follow these steps:
   
   2.Clone this repository: git clone https://github.com/Vibhatravi/Railfence
   
-  3.Navigate to the project directory: cd rail-fence-cipher
+  3.Navigate to the project directory: cd railfence_project
   
   4.Install dependencies: pip install -r requirements.txt
   
