@@ -1,21 +1,78 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rail Fence Cipher - Decryption</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous" defer></script>
 </head>
 <body>
-    <h1>Rail Fence Cipher - Decryption</h1>
-    <form method="post">
+    <div class="jumbotron text-center row pt-3 pd-3 md-3">
+		<div class="col-md-4 px-0">
+			<img class="img-fluid rounded" src={% static 'Logo.png' %} alt="letter_head_png" />	
+		</div>	
+        <p class="display-1 col pt-5 pl-2 ml-2 mt-5 text-primary">Railfence Cipher</p>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center">
+		<a class="navbar-brand text-primary" href="{% url 'railfence_home' %}">Railfence-Cipher</a>
+		<ul class="navbar-nav">
+            <li class="nav-item">
+				<a class="nav-link" href="{% url 'railfence_home' %}">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'railfence_encrypt' %}">Encryption</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" href="{% url 'railfence_decrypt' %}">Decryption</a>
+			</li>
+		</ul>
+	</nav>
+    <h1 class="display-4 mt-2 pt-2"><b><center>Decryption</center></b></h1>
+    {% comment %} <form method="post">
         {% csrf_token %}
         <label for="encrypted_message">Enter the encrypted message:</label>
         <input type="text" name="encrypted_message" id="encrypted_message" required><br>
         <label for="key">Enter the key:</label>
-        <input type="number" name="key" id="key" required><br>
+        <input type="number" name="key" id="key" required min="2"><br>
         <button type="submit">Decrypt</button>
     </form>
     {% if decrypted_message %}
     <h2>Decrypted Message:</h2>
     <p>{{ decrypted_message }}</p>
-    {% endif %}
+    {% endif %} {% endcomment %}
+    <main>
+        <div class="container mt-3">
+            <div class=" card m-auto " style=" width:50%;box-shadow:1px 1px 5px grey">
+                <div class="card-body">
+                    <form class="form" method="post">
+                        {% csrf_token %}
+                        <div class="form-groups mt-1">
+                            <label for="encrypted_message">Enter the encrypted message:</label>
+                            <input type="text" name="encrypted_message" class="form-control" id="encrypted_message" placeholder="Enter encrypted message" required>
+                        </div> 
+                        <div class="form-groups mt-1">
+                            <label for="key">Enter the key:</label>                    
+                            <input type="number" name="key" class="form-control" id="key" placeholder="Enter key" required min="2">
+                        </div>
+                        <div class="form-groups text-center">
+                            <br>
+                            <button type="submit" class="btn btn-outline-dark">Decrypt</button>  
+                        </div>
+                    </form>
+                    {% if decrypted_message %}
+                        <br>
+                        <h2 class="mb-3">Decrypted Message:</h2>
+                        <p style="font-size:19px;">{{ decrypted_message }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </main>   
+    <footer class=" mt-5 pt-2 pb-2 text-center bg-secondary text-white">
+        <p>Copyright reserved to @RVCE</p>
+        <p>Address: RV College of Engineering, Banglore-560098</p>
+    </footer>
 </body>
 </html>

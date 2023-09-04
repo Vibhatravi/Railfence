@@ -16,3 +16,6 @@ def railfence_decrypt(request):
         decrypted_message = decryptRailFence(encrypted_message, key)
         return render(request, 'decrypt.html', {'encrypted_message': encrypted_message, 'key': key, 'decrypted_message': decrypted_message})
     return render(request, 'decrypt.html')
+
+def railfence_home(request):
+    return render(request, 'home.html')
