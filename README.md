@@ -41,8 +41,6 @@ To set up the project locally, follow these steps:
   
   3.Navigate to the project directory: cd railfence_project
   
-  4.Install dependencies: pip install -r requirements.txt
+  4.Run migrations: python manage.py migrate
   
-  5.Run migrations: python manage.py migrate
-  
-  6.Start the development server: python manage.py runserver  
+  5.Start the development server: python manage.py runserver  
